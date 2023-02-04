@@ -350,7 +350,7 @@ if(SDL2TTF_INSTALL)
         install(CODE "
         file(COPY_FILE \"${CMAKE_CURRENT_BINARY_DIR}/SDL2_ttf-$<CONFIG>.pc\"
             \"${CMAKE_CURRENT_BINARY_DIR}/SDL2_ttf.pc\" ONLY_IF_DIFFERENT)
-        file(INSTALL DESTINATION \"\${CMAKE_INSTALL_PREFIX}/${PC_DESTDIR}\"
+        file(INSTALL DESTINATION \"${PC_DESTDIR}\"
             TYPE FILE
             FILES \"${CMAKE_CURRENT_BINARY_DIR}/SDL2_ttf.pc\")" CONFIG Release)
     endif()
